@@ -2,12 +2,12 @@
 
 const myKey = config.SECRET_KEY;
 
-let moodInput = 'Ambitious';
+let moodInput = 'Angry';
 
 let data = {
-    prompt: `Generate a positive affirmation based on my moodl\n My mood: ${moodInput}\n Affirmation:`,
+    prompt: `Suggest one positive thing I should do based on my mood.\n Mood:${moodInput}\n`,
     temperature: 0.9,
-    max_tokens: 192,
+    max_tokens: 20,
     top_p: 1.0,
     frequency_penalty: 0.0,
     presence_penalty: 0.0,
