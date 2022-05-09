@@ -3,3 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --lightBeige: #F5EBE5;
+    --darkestPurple: #6D6875;
+    --palePurple: #8E8997;
+    --peach: #FFDCC9;
+    --orange: #FFB4A2;
+    --mediumPink: #E5989B;
+    --darkPink: #A78088;
+}
+body {
+    font-family: 'DM Serif Display', serif;
+    background-color: var(--lightBeige);
+}
