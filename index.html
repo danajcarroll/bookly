@@ -13,30 +13,40 @@
 </head>
 <body>
     <header>
-        <i class="fas fa-bars"></i>
-        <h1>Moody</h1>
+        <i class="fas fa-bars" id="menuButton"></i>
+        <h1 class="logo">Moody</h1>
     </header>
     <nav>
         <div class="mobileNav"></div>
         <div class="desktopNav"></div>
     </nav>
     <main>
-        <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
-        <input type="text" placeholder="Nervous">
-        <input type="submit">
-        <div class="generatedResponse">
-            <h2>Angry</h2>
-            <p>Attempt to contact the person I was angry with to apologize.</p>
-        </div>
-        <div class="responseContainer">
-            <h3>Your feelings</h3>
-            <ul>
-                <li class="feelingResponse">
-                    <h2>Angry</h2>
-                    <p>Attempt to contact the person I was angry with to apologize.</p>
+        <section class="inputFeelingsContainer">
+            <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
+            <input type="text" placeholder="" class="moodInput" id="moodInput">
+            <button class="submitButton">Submit</button>
+            <!-- <div class="feelingThumbnail genResponseBK">
+                <h2 class="genEmotion">Angry</h2>
+                <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
+            </div> -->
+        </section>
+        <section class="feelingsListContainer">
+            <!-- <h3 class="listTitle">Your feelings</h3> -->
+            <ul class="feelingList">
+                <!-- <li class="feelingThumbnail feelingListBK">
+                    <h2 class="genEmotion">Angry</h2>
+                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
                 </li>
+                <li class="feelingThumbnail feelingListBK">
+                    <h2 class="genEmotion">Angry</h2>
+                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
+                </li>
+                <li class="feelingThumbnail feelingListBK">
+                    <h2 class="genEmotion">Angry</h2>
+                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
+                </li> -->
             </ul>
-        </div>
+        </section>
     </main>
 
     <script type='text/javascript' src="config.js"></script>
