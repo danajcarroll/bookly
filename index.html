@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb23a450d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>Moody</title>
 </head>
 <body>
-    <h1>Moody</h1>
+    <header>
+        <i class="fas fa-bars"></i>
+        <h1>Moody</h1>
+    </header>
+    <nav>
+        <div class="mobileNav"></div>
+        <div class="desktopNav"></div>
+    </nav>
+    <main>
+        <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
+        <input type="text" placeholder="Nervous">
+        <input type="submit">
+        <div class="generatedResponse">
+            <h2>Angry</h2>
+            <p>Attempt to contact the person I was angry with to apologize.</p>
+        </div>
+        <div class="responseContainer">
+            <h3>Your feelings</h3>
+            <ul>
+                <li class="feelingResponse">
+                    <h2>Angry</h2>
+                    <p>Attempt to contact the person I was angry with to apologize.</p>
+                </li>
+            </ul>
+        </div>
+    </main>
 
     <script type='text/javascript' src="config.js"></script>
     <script type='text/javascript' src="js/script.js"></script>
