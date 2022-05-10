@@ -107,11 +107,8 @@ main {
     color: var(--lightBeige);
 }
 .genResponseBK {
-    background-color: var(--palePurple);
-    
-}
-.feelingListBK {
     background-color: var(--darkPink);
+    
 }
 .feelingList {
     list-style-type: none;
