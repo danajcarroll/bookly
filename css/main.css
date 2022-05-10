@@ -163,7 +163,6 @@ a {
     padding: 0px 10px 0px 10px;
 }
 .feelingThumbnail {
-    position: relative;
     padding: 5px 12px 13px 12px;
     display: flex;
     flex-direction: column;
@@ -193,14 +192,27 @@ a {
 @media (min-width: 481px) and (max-width: 768px) {
 header, .mobileNavHeader {
     padding: 10px 20px 10px 20px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+.inputFeelingsContainer {
+    width: 75%;
+    height: 100%;
+    margin: auto;
 }
 .moodInput {
     width: 60%;
+    font-size: 1.25rem;
 }
 .submitButton {
     padding: 5px 20px;
     font-size: 1rem;
+}
+.feelingThumbnail {
+    width: 75%;
+    margin: auto;
+}
+.navLogo {
+    font-size: 3rem;
 }
 .navList {
     padding: 0px 30px 0px 30px;
@@ -228,46 +240,64 @@ header, .mobileNavHeader {
 main {
     padding: 10px 50px 20px 50px;
 }
+/* HEADER */
+.logo {
+    font-size: 3rem;
+}
+/* INPUT SECTION */
+.inputFeelingsContainer {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
 .instructions {
-    font-size: 2rem;
-}
-.moodInput {
-    width: 75%;
-    font-size: 2rem;
-}
-.submitButton {
-    padding: 10px 40px;
     font-size: 1.5rem;
 }
+.moodInput {
+    width: 60%;
+    font-size: 1.5rem;
+}
+.submitButton {
+    padding: 5px 30px;
+    font-size: 1.25rem;
+}
+/* NAV BAR */
 .navList {
     padding: 0px 50px 0px 50px;
+    width: 75%;
+    margin: auto;
 }
 .numberList {
     gap: 25px;
 }
 .mobNavListItem, .needHelp {
-    font-size: 2.75rem;
+    font-size: 2rem;
 }
 .needHelp p {
-    font-size: 1.75rem;
+    font-size: 1rem;
 }
 .numberTitle {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 }
 .numberTitle span {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
+/* FEELING LIST */
 .feelingThumbnail {
-    padding: 20px 40px 20px 40px;
+    padding: 10px 40px 20px 40px;
 }
 .genEmotion {
-    font-size: 2.75rem;
+    font-size: 2rem;
 }
 .genTask{
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 }
 .feelingList {
     padding-bottom: 150px;
+}
+.feelingsListContainer {
+    width: 75%;
+    margin: auto;
 }
 
 }
@@ -276,10 +306,142 @@ main {
 /* Media Query - Desktops & Large Screens */
 /* @media (min-width: 1025px) and (max-width: 1200px) { */
 @media (min-width: 1025px) and (max-width: 1439px) {
+body {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas: 
+    'nav header'
+    'nav main'
+    ;
+}
+nav {
+    grid-area: nav;
+}
+header {
+    grid-area: header;
+    display: block;
+}
+main {
+    grid-area: main;
+    padding: 0px 30px 25px 30px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr;
+}
+.mobileNav, #menuButton  {
+    display: none;
+}
+.desktopNav {
+    background-color: var(--palePurple);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desktopNav ul {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.desktopNav li {
+    color: var(--lightBeige);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* MAIN */
+.inputFeelingsContainer {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+.feelingList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: unset;
+    justify-content: center;
+}
+.feelingThumbnail {
+    width: 30%;
+    padding: 5px 12px 13px 12px;
+}
 
 }
 
 /* Media Query - Macbook Pro 13" minimum */
 @media (min-width: 1440px) {
+body {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    grid-template-rows: 0.1fr 2fr;
+    grid-template-areas: 
+    'nav header'
+    'nav main'
+    ;
+}
+nav {
+    grid-area: nav;
+}
+header {
+    grid-area: header;
+    display: block;
+    padding: 10px 0px 10px 0px;
+}
+main {
+    grid-area: main;
+    padding: 0px 30px 25px 30px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr;
+}
+/* NAVIGATION */
+.mobileNav, #menuButton  {
+    display: none;
+}
+.desktopNav {
+    background-color: var(--palePurple);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desktopNav ul {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.desktopNav li {
+    color: var(--lightBeige);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* MAIN */
+.inputFeelingsContainer {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+}
+.moodInput {
+    width: 75%;
+    font-size: 1.5rem;
+}
+.submitButton {
+    padding: 5px 20px;
+    font-size: 1rem;
+}
+.feelingList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: unset;
+    justify-content: center;
+}
+.feelingThumbnail {
+    width: 30%;
+    padding: 5px 12px 13px 12px;
+}
 
 }
