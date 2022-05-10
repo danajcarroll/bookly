@@ -50,6 +50,85 @@ main {
     'list'
     ;
 }
+/* NAVIGATION MOBILE */
+ul {
+    list-style-type: none;
+}
+.mobileNav {
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--palePurple);
+    display: flex;
+    flex-direction: column;
+}
+.mobileNavHeader {
+    padding: 5px 0px 5px 0px;
+    color: var(--lightBeige);
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'menu logo .';
+    align-items: center;
+}
+.exitMobile {
+    padding-left: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.navLogo {
+    text-align: center;
+}
+.navList {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+.mobNavListItem {
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+.numberList {
+    padding-top: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.needHelp {
+    color: var(--peach);
+    font-size: 1.5rem;
+}
+.needHelp p {
+    font-size: 0.9rem;
+    color: var(--lightBeige);
+}
+.numberTitle {
+    color: var(--peach);
+    font-size: 1.1rem;
+}
+.numberTitle span {
+    font-size: 0.9rem;
+    display: inline-block;
+    width: 100%;
+}
+.numberText {
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
 .inputFeelingsContainer {
     grid-area: generator;
     display: flex;

@@ -12,14 +12,48 @@
     <title>Moody</title>
 </head>
 <body>
-    <header>
-        <i class="fas fa-bars" id="menuButton"></i>
-        <h1 class="logo">Moody</h1>
-    </header>
     <nav>
-        <div class="mobileNav"></div>
+        <div class="mobileNav">
+            <div class="mobileNavHeader">
+                <i class="fa-solid fa-xmark exitMobile" id="exitMobileMenu"></i>
+                <h1 class="navLogo">Moody</h1>
+            </div>
+            <ul class="navList">
+                <li class="mobNavListItem">Home</li>
+                <li class="mobNavListItem">Quick Vent</li>
+                <li class="mobNavListItem">Breathe</li>
+                <li class="needHelp">
+                    Need Help?
+                    <p>Taking care of yourself goes beyond going on walks and writing in your journal. Here's some important numbers for you to call if you need support.</p>
+                    <ul class="numberList">
+                        <li>
+                            <h3 class="numberTitle">Canada Suicide Hotline</h3>
+                            <p class="numberText">833-456-4566</p>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">Hope for Wellness <span>(Indigenous peoples support)</span></h3>
+                            <p class="numberText">1-855-242-3310</p>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">Trans Lifeline</h3>
+                            <p class="numberText">877-330-6366</p>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">LGBTQ+ Youth Line</h3>
+                            <p class="numberText">1-800-268-9688</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
         <div class="desktopNav"></div>
     </nav>
+    <header>
+        <i class="fa-solid fa-bars" id="menuButton"></i>
+        <h1 class="logo">Moody</h1>
+    </header>
     <main>
         <section class="inputFeelingsContainer">
             <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
@@ -28,18 +62,7 @@
         </section>
         <section class="feelingsListContainer">
             <ul class="feelingList" id="feelingList">
-                <!-- <li class="feelingThumbnail feelingListBK">
-                    <h2 class="genEmotion">Angry</h2>
-                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
-                </li>
-                <li class="feelingThumbnail feelingListBK">
-                    <h2 class="genEmotion">Angry</h2>
-                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
-                </li>
-                <li class="feelingThumbnail feelingListBK">
-                    <h2 class="genEmotion">Angry</h2>
-                    <p class="genTask">Attempt to contact the person I was angry with to apologize.</p>
-                </li> -->
+                
             </ul>
         </section>
     </main>
