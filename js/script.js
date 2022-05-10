@@ -7,13 +7,13 @@ const mobileNav = document.getElementById('mobileNav');
 const moodInputBox = document.getElementById('moodInput');
 const submitButton = document.getElementById('submitButton');
 const feelingList = document.getElementById('feelingList');
-const taskData = JSON.parse(localStorage.getItem('allTasks'));
-let taskArray = localStorage.getItem('allTasks') ? JSON.parse(localStorage.getItem('allTasks')) : [];
-localStorage.setItem('allTasks', JSON.stringify(taskArray));
+const clearListButton = document.getElementById('clearList');
+let taskArray = []
+
 
 function getTaskHTML(element) {
     return `
-        <div class="feelingThumbnail genResponseBK">
+        <div class="feelingThumbnail" id="${element.mood}">
             <h2 class="genEmotion">${element.mood}</h2>
             <p class="genTask">${element.task}</p>
         </div>
@@ -23,7 +23,7 @@ function getTaskHTML(element) {
 let data = {
     prompt: `Suggest one positive thing I can do based on my mood.\n Mood:${moodInput}`,
     temperature: 0.9,
-    max_tokens: 40,
+    max_tokens: 64,
     top_p: 1.0,
     frequency_penalty: 0.0,
     presence_penalty: 0.0,
@@ -63,17 +63,10 @@ submitButton.addEventListener('click', () => {
         console.log(moodTask);
         taskArray.unshift(moodTask);
     }).then(() => {
-        console.log(taskArray);
-        localStorage.setItem('allTasks', JSON.stringify(taskArray));
         let taskHTML = taskArray.map((element) => getTaskHTML(element));
         taskHTML = taskHTML.join('');
         feelingList.innerHTML = taskHTML;
+        moodInputBox.value = '';
     });
 })
 
-// Updating with current localStorage
-window.addEventListener('DOMContentLoaded', () => {
-    let taskHTML = taskArray.map((element) => getTaskHTML(element));
-    taskHTML = taskHTML.join('');
-    feelingList.innerHTML = taskHTML;
-})

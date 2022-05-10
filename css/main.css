@@ -27,6 +27,7 @@ header {
     grid-template-rows: auto;
     grid-template-areas: 'menu logo .';
     align-items: center;
+    font-size: 1.5rem;
 }
 .logo {
     text-align: center;
@@ -44,7 +45,7 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas: 
     'generator'
     'list'
@@ -53,6 +54,9 @@ main {
 /* NAVIGATION MOBILE */
 ul {
     list-style-type: none;
+}
+a {
+    text-decoration: none;
 }
 .mobileNav {
     position: absolute;
@@ -63,6 +67,10 @@ ul {
     display: flex;
     flex-direction: column;
     transition: 500ms;
+    z-index: 2;
+}
+.desktopNav {
+    display: none;
 }
 .mobileNav.activeMobileNav {
     transition: 500ms;
@@ -125,21 +133,12 @@ ul {
 .numberText {
     font-size: 1.1rem;
 }
-
-
-
-
-
-
-
-
-
 .inputFeelingsContainer {
     grid-area: generator;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: space-evenly;
 }
 .instructions {
     color: var(--darkPurple);
@@ -156,9 +155,9 @@ ul {
 }
 .submitButton {
     border: none;
-    background-color: var(--orange);
+    background-color: var(--palePurple);
     border-radius: 5px;
-    color: var(--darkPurple);
+    color: var(--lightBeige);
     padding: 5px 15px;
     font-size: 0.75rem;
 }
@@ -167,34 +166,85 @@ ul {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     overflow-y: auto;
     padding: 0px 10px 0px 10px;
 }
-.listTitle {
-    color: var(--mediumPink);
-    display: none;
-}
 .feelingThumbnail {
-    padding: 10px 12px 10px 12px;
+    position: relative;
+    padding: 5px 12px 13px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 9px;
-    margin-bottom: 10px;
+    background-color: var(--darkPink);
+    transition: 500ms;
 }
 .genEmotion {
     color: var(--peach);
 }
-.genTask {
+.genTask{
     color: var(--lightBeige);
-}
-.genResponseBK {
-    background-color: var(--darkPink);
-    
 }
 .feelingList {
     list-style-type: none;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+
+/* Media Query - Low Res Tablets & iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+header, .mobileNavHeader {
+    padding: 10px 20px 10px 20px;
+    font-size: 1.5rem;
+}
+.moodInput {
+    width: 60%;
+}
+.submitButton {
+    border: none;
+    background-color: var(--palePurple);
+    border-radius: 5px;
+    color: var(--lightBeige);
+    padding: 5px 20px;
+    font-size: 1rem;
+}
+.navList {
+    padding: 0px 30px 0px 30px;
+}
+.mobNavListItem, .needHelp {
+    font-size: 2rem;
+}
+.needHelp p {
+    font-size: 1rem;
+}
+.numberTitle, .numberText {
+    font-size: 1.2rem;
+}
+
+}
+
+
+
+/* Media Query - Small Screens & Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+/* Media Query - Desktops & Large Screens */
+/* @media (min-width: 1025px) and (max-width: 1200px) { */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+}
+
+/* Media Query - Macbook Pro 13" minimum */
+@media (min-width: 1440px) {
+
 }
