@@ -1,7 +1,10 @@
 'use strict';
 
 const myKey = config.SECRET_KEY;
-let moodInputBox = document.getElementById('moodInput');
+const menuButton = document.getElementById('menuButton');
+const exitMobileMenu = document.getElementById('exitMobileMenu');
+const mobileNav = document.getElementById('mobileNav');
+const moodInputBox = document.getElementById('moodInput');
 const submitButton = document.getElementById('submitButton');
 const feelingList = document.getElementById('feelingList');
 const taskData = JSON.parse(localStorage.getItem('allTasks'));
@@ -9,22 +12,6 @@ let taskArray = localStorage.getItem('allTasks') ? JSON.parse(localStorage.getIt
 localStorage.setItem('allTasks', JSON.stringify(taskArray));
 
 function getTaskHTML(element) {
-    return `
-        <div class="feelingThumbnail genResponseBK">
-            <h2 class="genEmotion">${element.mood}</h2>
-            <p class="genTask">${element.task}</p>
-        </div>
-    `;
-}
-
-// Updating with current localStorage
-window.addEventListener('DOMContentLoaded', () => {
-    let taskHTML = taskArray.map((element) => getTaskHTML(element));
-    taskHTML = taskHTML.join('');
-    feelingList.innerHTML = taskHTML;
-})
-
-function printFeelings(element) {
     return `
         <div class="feelingThumbnail genResponseBK">
             <h2 class="genEmotion">${element.mood}</h2>
@@ -55,6 +42,13 @@ async function getResponse() {
     return answer.choices[0].text;
 }
 
+menuButton.addEventListener('click', () => {
+    mobileNav.classList.toggle('activeMobileNav');
+})
+exitMobileMenu.addEventListener('click', () => {
+    mobileNav.classList.toggle('activeMobileNav');
+})
+
 submitButton.addEventListener('click', () => {
     let moodInput = moodInputBox.value;
     let moodTask = {
@@ -75,4 +69,11 @@ submitButton.addEventListener('click', () => {
         taskHTML = taskHTML.join('');
         feelingList.innerHTML = taskHTML;
     });
+})
+
+// Updating with current localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    let taskHTML = taskArray.map((element) => getTaskHTML(element));
+    taskHTML = taskHTML.join('');
+    feelingList.innerHTML = taskHTML;
 })
