@@ -55,7 +55,7 @@ submitButton.addEventListener('click', () => {
         mood: '',
         task: ''
     }
-    data.prompt =  `Suggest one positive thing I can do based on my mood.\n Mood:${moodInput}\n`;
+    data.prompt =  `Suggest one short positive activity I can do based on my mood.\n Mood:${moodInput}\n`;
     getResponse().then(text => {
         let newText = text.slice(1);
         moodTask.task = newText;
