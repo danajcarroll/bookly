@@ -18,7 +18,6 @@ let data = {
     presence_penalty: 0.0,
 };
 
-
 async function getResponse() {
     const response = await fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
         method: "POST",
@@ -32,15 +31,6 @@ async function getResponse() {
     return answer.choices[0].text;
 }
 
-function createTask(mood, task) {
-    return `
-        <div class="feelingThumbnail genResponseBK">
-            <h2 class="genEmotion">${mood}</h2>
-            <p class="genTask">${task}</p>
-        </div>
-    `;
-}
-
 submitButton.addEventListener('click', () => {
     let moodInput = moodInputBox.value;
     let moodTask = {
@@ -52,7 +42,7 @@ submitButton.addEventListener('click', () => {
         let newText = text.slice(1);
         moodTask.task = newText;
         moodTask.mood = moodInput;
-        taskArray.push(moodTask);
+        taskArray.unshift(moodTask);
     }).then(() => {
         console.log(taskArray);
         localStorage.setItem('allTasks', JSON.stringify(taskArray));
@@ -65,7 +55,6 @@ submitButton.addEventListener('click', () => {
             `;
         })
         taskHTML = taskHTML.join('');
-        console.log(taskHTML);
         feelingList.innerHTML = taskHTML;
     });
 })
