@@ -33,6 +33,9 @@ header, .mobileNavHeader {
     text-align: center;
     color: var(--palePurple);
 }
+.activePage {
+    color: var(--orange);
+}
 #menuButton {
     padding-left: 15px;
     cursor: pointer;
