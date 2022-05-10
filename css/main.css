@@ -20,7 +20,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-header {
+header, .mobileNavHeader {
     padding: 5px 0px 5px 0px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -36,7 +36,6 @@ header {
 #menuButton {
     padding-left: 15px;
     cursor: pointer;
-    font-size: 1.5rem;
     color: var(--palePurple);
 }
 main {
@@ -77,18 +76,10 @@ a {
     left: 0;
 }
 .mobileNavHeader {
-    padding: 5px 0px 5px 0px;
     color: var(--lightBeige);
-    font-size: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'menu logo .';
-    align-items: center;
 }
 .exitMobile {
     padding-left: 15px;
-    font-size: 1.5rem;
     cursor: pointer;
 }
 .navLogo {
@@ -147,7 +138,7 @@ a {
 }
 .moodInput {
     border: 1px solid var(--darkPink);
-    color: var(--darkPurple);
+    color: var(--darkPink);
     padding: 5px 10px 5px 10px;
     background-color: transparent;
     border-radius: 9px;
@@ -208,10 +199,6 @@ header, .mobileNavHeader {
     width: 60%;
 }
 .submitButton {
-    border: none;
-    background-color: var(--palePurple);
-    border-radius: 5px;
-    color: var(--lightBeige);
     padding: 5px 20px;
     font-size: 1rem;
 }
@@ -234,6 +221,54 @@ header, .mobileNavHeader {
 
 /* Media Query - Small Screens & Laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
+header, .mobileNavHeader {
+    padding: 10px 20px 10px 20px;
+    font-size: 2rem;
+}
+main {
+    padding: 10px 50px 20px 50px;
+}
+.instructions {
+    font-size: 2rem;
+}
+.moodInput {
+    width: 75%;
+    font-size: 2rem;
+}
+.submitButton {
+    padding: 10px 40px;
+    font-size: 1.5rem;
+}
+.navList {
+    padding: 0px 50px 0px 50px;
+}
+.numberList {
+    gap: 25px;
+}
+.mobNavListItem, .needHelp {
+    font-size: 2.75rem;
+}
+.needHelp p {
+    font-size: 1.75rem;
+}
+.numberTitle {
+    font-size: 1.75rem;
+}
+.numberTitle span {
+    font-size: 1.5rem;
+}
+.feelingThumbnail {
+    padding: 20px 40px 20px 40px;
+}
+.genEmotion {
+    font-size: 2.75rem;
+}
+.genTask{
+    font-size: 1.75rem;
+}
+.feelingList {
+    padding-bottom: 150px;
+}
 
 }
 
