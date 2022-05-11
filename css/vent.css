@@ -23,10 +23,13 @@ main {
     grid-template-rows: 0.5fr 3fr;
     grid-template-columns: auto;
 }
-.flexColumnCenter {
+.flexColumn {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+.titleBox {
+    /* width: 90%;
+    justify-content: center; */
     text-align: center;
 }
 .titleBox h3 {
@@ -41,11 +44,14 @@ main {
     display: inline-block;
     width: 100%;
 }
+/* VENT PAGE */
 .inputSection {
-    height: 75%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 .inputSection textarea {
     padding: 10px;
@@ -73,6 +79,35 @@ main {
 
 /* Media Query - Low Res Tablets & iPads */
 @media (min-width: 481px) and (max-width: 768px) {
+main {
+    width: 80%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+}
+.titleBox h3 {
+    font-size: 2rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.5rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.5rem;
+}
+
+
 
 }
 
@@ -80,6 +115,36 @@ main {
 
 /* Media Query - Small Screens & Laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}
+.titleBox h3 {
+    font-size: 2rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.5rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.5rem;
+    height: 80%;
+}
 
 }
 
@@ -88,6 +153,50 @@ main {
 /* Media Query - Desktops & Large Screens */
 /* @media (min-width: 1025px) and (max-width: 1200px) { */
 @media (min-width: 1025px) and (max-width: 1439px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.titleBox h3 {
+    font-size: 1.75rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.25rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.25rem;
+    height: 80%;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.5rem;
+}
 
 }
 
@@ -95,5 +204,49 @@ main {
 
 /* Media Query - Macbook Pro 13" minimum */
 @media (min-width: 1440px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.titleBox h3 {
+    font-size: 1.75rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.25rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.25rem;
+    height: 80%;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.5rem;
+}
 
 }
