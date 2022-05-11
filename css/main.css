@@ -37,9 +37,9 @@ header, .mobileNavHeader {
 .activePage {
     color: var(--orange);
 }
-main {
+/* main {
     height: 100%;
-}
+} */
 #menuButton {
     padding-left: 15px;
     cursor: pointer;
@@ -315,8 +315,8 @@ main {
 @media (min-width: 1025px) and (max-width: 1439px) {
 body {
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    grid-template-rows: 0.1fr 1fr;
+    grid-template-columns: 0.15fr 2fr;
+    grid-template-rows: 0.15fr 2fr;
     grid-template-areas: 
     'nav header'
     'nav main'
