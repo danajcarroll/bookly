@@ -30,9 +30,11 @@ header, .mobileNavHeader {
     font-size: 1.5rem;
 }
 .logo {
-    text-align: center;
     color: var(--palePurple);
+}
+.logo, .navLogo {
     font-size: 2.5rem;
+    text-align: center;
 }
 .activePage {
     color: var(--orange);
@@ -64,6 +66,10 @@ ul {
 a {
     text-decoration: none;
 }
+a [href^="tel"] {
+    text-decoration: none;
+    color: unset;
+}
 .mobileNav {
     position: absolute;
     left: -100vw;
@@ -90,7 +96,6 @@ a {
     cursor: pointer;
 }
 .navLogo {
-    text-align: center;
     color: var(--lightBeige);
 }
 .navList {
@@ -105,7 +110,7 @@ a {
     color: var(--orange);
     font-size: 1.5rem;
 }
-.numberList {
+.menuNumberList {
     padding-top: 15px;
     height: 100%;
     display: flex;
