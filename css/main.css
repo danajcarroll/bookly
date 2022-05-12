@@ -14,13 +14,13 @@
     --mediumPink: #E5989B;
     --darkPink: #A78088;
 }
-/* .transition-fade {
+.transition-fade {
     opacity: 1;
     transition: 500ms;
 }
 html.is-animating .transition-fade {
     opacity: 0;
-} */
+}
 body {
     background-color: var(--lightBeige);
     width: 100vw;
