@@ -112,18 +112,18 @@ main {
     color: var(--lightBeige);
 }
 /* NUMBERS PAGE */
-.numberList {
+.menuNumberList {
     text-align: center;
     height: 90%;
     width: 95%;
     margin: auto;
     justify-content: space-evenly;
 }
-.numberList h2 {
+.menuNumberList h2 {
     color: var(--darkPink);
     font-size: 1.5rem;
 }
-.numberList p {
+.menuNumberList p {
     color: var(--palePurple);
     font-size: 1.25rem;
 }
@@ -159,17 +159,17 @@ main {
     font-size: 1.5rem;
 }
 /* NUMBERS PAGE */
-.numberList {
+.menuNumberList {
     text-align: center;
     height: 90%;
     width: 90%;
     justify-content: space-evenly;
 }
-.numberList h2 {
+.menuNumberList h2 {
     color: var(--darkPink);
     font-size: 1.75rem;
 }
-.numberList p {
+.menuNumberList p {
     color: var(--palePurple);
     font-size: 1.5rem;
 }
@@ -213,16 +213,16 @@ main {
     height: 80%;
 }
 /* NUMBERS PAGE */
-.numberList {
+.menuNumberList {
     text-align: center;
     height: 90%;
     justify-content: space-evenly;
 }
-.numberList h2 {
+.menuNumberList h2 {
     color: var(--darkPink);
     font-size: 2.75rem;
 }
-.numberList p {
+.menuNumberList p {
     color: var(--palePurple);
     font-size: 2.25rem;
 }
@@ -265,16 +265,16 @@ main {
     height: 80%;
 }
 /* NUMBERS PAGE */
-.numberList {
+.menuNumberList {
     text-align: center;
     height: 90%;
     justify-content: space-evenly;
 }
-.numberList h2 {
+.menuNumberList h2 {
     color: var(--darkPink);
     font-size: 1.75rem;
 }
-.numberList p {
+.menuNumberList p {
     color: var(--palePurple);
     font-size: 1.5rem;
 }
@@ -316,16 +316,16 @@ main {
     height: 80%;
 }
 /* NUMBERS PAGE */
-.numberList {
+.menuNumberList {
     text-align: center;
     height: 90%;
     justify-content: space-evenly;
 }
-.numberList h2 {
+.menuNumberList h2 {
     color: var(--darkPink);
     font-size: 1.75rem;
 }
-.numberList p {
+.menuNumberList p {
     color: var(--palePurple);
     font-size: 1.5rem;
 }
