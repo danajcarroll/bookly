@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb23a450d4.js" crossorigin="anonymous"></script>
     <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Moody</title>
 </head>
@@ -20,9 +21,9 @@
                 <a href="index.html" class="navLogo">Moody</a>
             </div>
             <ul class="navList">
-                <a href="index.html" class="mobNavListItem"><li>Home</li></a>
-                <a href="vent.html" class="mobNavListItem"><li>Quick Vent</li></a>
-                <a href="breathe.html" class="mobNavListItem"><li>Breathe</li></a>
+                <a href="/index.html" class="mobNavListItem"><li>Home</li></a>
+                <a href="/vent.html" class="mobNavListItem"><li>Quick Vent</li></a>
+                <a href="/breathe.html" class="mobNavListItem"><li>Breathe</li></a>
                 <li class="needHelp">
                     Need Help?
                     <p>Taking care of yourself goes beyond going on walks and writing in your journal. Here's some important numbers for you to call if you need support.</p>
@@ -49,10 +50,10 @@
         </div>
         <div class="desktopNav">
             <ul>
-                <a href="index.html" class="desktopNavIcon"><li><i class="fa-solid fa-house activePage"></i></li></a>
-                <a href="vent.html" class="desktopNavIcon"><li><i class="fa-solid fa-file-pen"></i></li></a>
-                <a href="breathe.html" class="desktopNavIcon"><li><i class="fa-solid fa-wind"></i></li></a>
-                <a href="numbers.html" class="desktopNavIcon"><li><i class="fa-solid fa-phone"></i></li></a>
+                <a href="/index.html" class="desktopNavIcon"><li><i class="fa-solid fa-house activePage"></i></li></a>
+                <a href="/vent.html" class="desktopNavIcon"><li><i class="fa-solid fa-file-pen"></i></li></a>
+                <a href="/breathe.html" class="desktopNavIcon"><li><i class="fa-solid fa-wind"></i></li></a>
+                <a href="/numbers.html" class="desktopNavIcon"><li><i class="fa-solid fa-phone"></i></li></a>
             </ul>
         </div>
     </nav>
@@ -60,8 +61,8 @@
         <i class="fa-solid fa-bars" id="menuButton"></i>
         <a href="index.html" class="logo">Moody</a>
     </header>
-    <main data-router-wrapper>
-        <div class="contentWrapper homeWrapper" data-router-view="home">
+    <main>
+        <div class="contentWrapper homeWrapper transition-fade" id="swup">
             <section class="inputFeelingsContainer">
                 <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
                 <input type="text" placeholder="" class="moodInput" id="moodInput" value="">
