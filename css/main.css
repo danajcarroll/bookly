@@ -91,6 +91,7 @@ a {
 }
 .navLogo {
     text-align: center;
+    color: var(--lightBeige);
 }
 .navList {
     height: 100%;
@@ -130,6 +131,7 @@ a {
 }
 .numberText {
     font-size: 1.1rem;
+    color: var(--lightBeige);
 }
 .inputFeelingsContainer {
     grid-area: generator;
