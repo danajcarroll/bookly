@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+}
+:root {
+    --lightBeige: #F5EBE5;
+    --darkPurple: #6D6875;
+    --palePurple: #8E8997;
+    --peach: #FFDCC9;
+    --orange: #FFB4A2;
+    --mediumPink: #E5989B;
+    --darkPink: #A78088;
+}
+main {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.contentWrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-columns: auto;
+}
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+.titleBox {
+    /* width: 90%; */
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+.titleBox h3 {
+    font-size: 1.5rem;
+    color: var(--darkPurple);
+}
+.titleBox p {
+    font-size: 0.9rem;
+    color: var(--palePurple);
+}
+.titleBox span {
+    display: inline-block;
+    width: 100%;
+}
+/* VENT PAGE */
+.inputSection {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.inputSection textarea {
+    padding: 10px;
+    width: 90%;
+    height: 60%;
+    border: 1px solid var(--darkPurple);
+    background-color: transparent;
+    color: var(--palePurple);
+    border-radius: 9px;
+    font-size: 1rem;
+}
+.inputSection button {
+    width: 90%;
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color: var(--darkPink);
+    color: var(--lightBeige);
+    border: none;
+    border-radius: 9px;
+}
+.inputSection p {
+    color: var(--darkPurple);
+} 
+/* BREATHE PAGE */
+.startButton {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--palePurple);
+    background-color: var(--lightBeige);
+    color: var(--palePurple);
+    font-size: 1.75rem;
+}
+.animationContainer {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.breatheButtonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.breatheButtonBox button {
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background-color: var(--palePurple);
+    color: var(--lightBeige);
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    width: 95%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.5rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.25rem;
+}
+
+
+/* Media Query - Low Res Tablets & iPads */
+@media (min-width: 481px) and (max-width: 768px) {
+main {
+    width: 80%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+}
+.titleBox h3 {
+    font-size: 2rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.5rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.5rem;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.5rem;
+}
+
+
+
+}
+
+
+
+/* Media Query - Small Screens & Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}
+.titleBox h3 {
+    font-size: 2.5rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.75rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.5rem;
+    height: 80%;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 2.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 2.25rem;
+}
+
+}
+
+
+
+/* Media Query - Desktops & Large Screens */
+/* @media (min-width: 1025px) and (max-width: 1200px) { */
+@media (min-width: 1025px) and (max-width: 1439px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.titleBox h3 {
+    font-size: 1.75rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.25rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.25rem;
+    height: 80%;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.5rem;
+}
+
+}
+
+
+
+/* Media Query - Macbook Pro 13" minimum */
+@media (min-width: 1440px) {
+main {
+    width: 90%;
+    margin: auto;
+}
+.titleBox {
+    text-align: left;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.titleBox h3 {
+    font-size: 1.75rem;
+}
+.titleBox p, .inputSection p {
+    font-size: 1.25rem;
+}
+.titleBox span {
+    display: unset;
+}
+/* VENT PAGE */
+.inputSection textarea, .inputSection button {
+    width: 100%;
+}
+.inputSection {
+    justify-content: flex-start;
+    gap: 30px;
+}
+.inputSection textarea {
+    font-size: 1.25rem;
+    height: 80%;
+}
+/* NUMBERS PAGE */
+.numberList {
+    text-align: center;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.numberList h2 {
+    color: var(--darkPink);
+    font-size: 1.75rem;
+}
+.numberList p {
+    color: var(--palePurple);
+    font-size: 1.5rem;
+}
+
+}
+
+/*# sourceMappingURL=/subpage.20c89f74.css.map */

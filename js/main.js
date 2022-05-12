@@ -1,14 +1,5 @@
 'use strict';
 
-import Highway from '@dogstudio/highway';
-import Fade from './fade.js';
-
-const highway = new Highway.Core({
-    transitions: {
-        default: Fade
-    }
-})
-
 const menuButton = document.getElementById('menuButton');
 const exitMobileMenu = document.getElementById('exitMobileMenu');
 const mobileNav = document.getElementById('mobileNav');

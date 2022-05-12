@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scalegit=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb23a450d4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/subpage.css">
+    <link rel="stylesheet" href="/main.c52e0fe2.css">
+    <link rel="stylesheet" href="/subpage.20c89f74.css">
     <title>Moody</title>
 </head>
 <body>
-    <nav>
+    <!-- <nav>
         <div class="mobileNav" id="mobileNav">
             <div class="mobileNavHeader">
                 <i class="fa-solid fa-xmark exitMobile" id="exitMobileMenu"></i>
@@ -29,19 +29,19 @@
                     <ul class="menuNumberList">
                         <li>
                             <h3 class="numberTitle">Canada Suicide Hotline</h3>
-                            <p class="numberText">833-456-4566</p>
+                            <a href="tel:833-456-4566" class="numberText">833-456-4566</a>
                         </li>
                         <li>
                             <h3 class="numberTitle">Hope for Wellness <span>(Indigenous peoples' support)</span></h3>
-                            <p class="numberText">1-855-242-3310</p>
+                            <a href="tel:+1-855-242-3310" class="numberText">1-855-242-3310</a>
                         </li>
                         <li>
                             <h3 class="numberTitle">Trans Lifeline</h3>
-                            <p class="numberText">877-330-6366</p>
+                            <a href="tel:877-330-6366" class="numberText">877-330-6366</a>
                         </li>
                         <li>
                             <h3 class="numberTitle">LGBTQ+ Youth Line</h3>
-                            <p class="numberText">1-800-268-9688</p>
+                            <a href="tel:+1-800-268-9688" class="numberText">+1-800-268-9688</a>
                         </li>
                     </ul>
                 </li>
@@ -58,25 +58,40 @@
     </nav>
     <header>
         <i class="fa-solid fa-bars" id="menuButton"></i>
-        <a href="index.html" class="logo">Moody</a>
-    </header>
-    <main data-router-wrapper>
-        <div class="contentWrapper" data-router-view="vent">
-            <section class="titleBox flexColumn">
-                <h3>Quick Vent</h3>
-                <p>Get your feelings off your chest. <span>Don't worry, we don't save these.</span></p>
+        <a href="index.html" class="logo"><h1>Moody</h1></a>
+    </header> -->
+    <main data-router-wrapper="">
+        <div class="contentWrapper" data-router-view="numbers">
+            <section class="titleBox flexColumnCenter">
+                <h3>Need Help?</h3>
+                <p>Taking care of yourself goes beyond going on walks and writing in your journal. Here’s some important numbers for you to call if you’d like some support.</p>
             </section>
-            <section class="inputSection flexColumn">
-                <textarea class="ventInputBox" placeholder="What's on your mind?" id="ventInputBox"></textarea>
-                <button id="trashButton"><i class="fa-solid fa-trash-can"></i></button>
-                <p>Even if you don't hit the trash button, it still won't save. This is just meant to be symbollic.</p>
+            <section class="numberBox">
+                <ul class="numberList">
+                    <li>
+                        <h2>Canada Suicide Hotline</h2>
+                        <p>833-456-4566</p>
+                    </li>
+                    <li>
+                        <h2>Hope for Wellness <span>Indigenous peoples' support</span></h2>
+                        <p>1-855-242-3310</p>
+                    </li>
+                    <li>
+                        <h2>Trans Lifeline</h2>
+                        <p>877-330-6366</p>
+                    </li>
+                    <li>
+                        <h2>LGTBQ Youth Line</h2>
+                        <p>1-800-268-9688</p>
+                    </li>
+                </ul>
             </section>
 
         </div>
     </main>
 
-    <script type='text/javascript' src="config.js"></script>
-    <script type='text/javascript' src="./js/main.js"></script>
-    <script type='text/javascript' src="./js/vent.js"></script>
+    <script type="text/javascript" src="/config.bcd7753d.js"></script>
+    <script type="text/javascript" src="/main.fb6bbcaf.js"></script>
+    <script type="text/javascript" src="/vent.0296dafe.js"></script>
 </body>
 </html>

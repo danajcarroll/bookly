@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb23a450d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/main.c52e0fe2.css">
+    <title>Moody</title>
+<script src="/main.c52e0fe2.js"></script></head>
+<body>
+    <nav>
+        <div class="mobileNav" id="mobileNav">
+            <div class="mobileNavHeader">
+                <i class="fa-solid fa-xmark exitMobile" id="exitMobileMenu"></i>
+                <a href="/index.html" class="navLogo">Moody</a>
+            </div>
+            <ul class="navList">
+                <a href="/index.html" class="mobNavListItem"><li>Home</li></a>
+                <a href="/vent.html" class="mobNavListItem"><li>Quick Vent</li></a>
+                <a href="/breathe.html" class="mobNavListItem"><li>Breathe</li></a>
+                <li class="needHelp">
+                    Need Help?
+                    <p>Taking care of yourself goes beyond going on walks and writing in your journal. Here's some important numbers for you to call if you need support.</p>
+                    <ul class="menuNumberList">
+                        <li>
+                            <h3 class="numberTitle">Canada Suicide Hotline</h3>
+                            <a href="tel:833-456-4566" class="numberText">833-456-4566</a>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">Hope for Wellness <span>(Indigenous peoples' support)</span></h3>
+                            <a href="tel:+1-855-242-3310" class="numberText">1-855-242-3310</a>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">Trans Lifeline</h3>
+                            <a href="tel:877-330-6366" class="numberText">877-330-6366</a>
+                        </li>
+                        <li>
+                            <h3 class="numberTitle">LGBTQ+ Youth Line</h3>
+                            <a href="tel:+1-800-268-9688" class="numberText">+1-800-268-9688</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="desktopNav">
+            <ul>
+                <a href="/index.html" class="desktopNavIcon"><li><i class="fa-solid fa-house activePage"></i></li></a>
+                <a href="/vent.html" class="desktopNavIcon"><li><i class="fa-solid fa-file-pen"></i></li></a>
+                <a href="/breathe.html" class="desktopNavIcon"><li><i class="fa-solid fa-wind"></i></li></a>
+                <a href="/numbers.html" class="desktopNavIcon"><li><i class="fa-solid fa-phone"></i></li></a>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <i class="fa-solid fa-bars" id="menuButton"></i>
+        <a href="/index.html" class="logo">Moody</a>
+    </header>
+    <main data-router-wrapper="">
+        <div class="contentWrapper homeWrapper" data-router-view="home">
+            <section class="inputFeelingsContainer">
+                <p class="instructions">In one word tell us how you're feeling. We'll suggest a positive way to cope with your current mood.</p>
+                <input type="text" placeholder="" class="moodInput" id="moodInput" value="">
+                    <button class="submitButton" id="submitButton">Submit</button>
+            </section>
+            <section class="feelingsListContainer">
+                <ul class="feelingList" id="feelingList">
+                    
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="/config.bcd7753d.js"></script>
+    <script type="text/javascript" src="/main.fb6bbcaf.js"></script>
+    <script type="text/javascript" src="/js.00a46daa.js"></script>
+</body>
+</html>
