@@ -74,6 +74,39 @@ main {
 }
 .inputSection p {
     color: var(--darkPurple);
+} 
+/* BREATHE PAGE */
+.startButton {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--palePurple);
+    background-color: var(--lightBeige);
+    color: var(--palePurple);
+    font-size: 1.75rem;
+}
+.animationContainer {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.breatheButtonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.breatheButtonBox button {
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background-color: var(--palePurple);
+    color: var(--lightBeige);
 }
 
 
