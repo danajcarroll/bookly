@@ -335,6 +335,7 @@ nav {
 header {
     grid-area: header;
     display: block;
+    margin: auto;
 }
 main {
     grid-area: main;
@@ -402,6 +403,7 @@ header {
     grid-area: header;
     display: block;
     padding: 10px 0px 10px 0px;
+    margin: auto;
 }
 main {
     grid-area: main;
