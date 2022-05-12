@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "gsap": "^3.10.4",
     "openai": "^2.0.5"
   }
 }
