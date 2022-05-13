@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "gsap": "^3.10.4",
     "openai": "^2.0.5",
     "swup": "^2.0.14"
   }

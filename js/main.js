@@ -1,5 +1,6 @@
 'use strict';
 
+
 const menuButton = document.getElementById('menuButton');
 const exitMobileMenu = document.getElementById('exitMobileMenu');
 const mobileNav = document.getElementById('mobileNav');
@@ -20,3 +21,10 @@ const headerHeight = header.clientHeight;
 const windowHeight = window.innerHeight;
 
 main.style.height = `${bodyHeight - headerHeight}px`;
+
+let homeAnimation = gsap.timeline();
+
+homeAnimation.from('.logo', {
+    y: -200,
+    duration: 1
+})
