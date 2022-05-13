@@ -242,6 +242,7 @@ main {
     text-align: left;
     justify-content: flex-end;
     padding-bottom: 20px;
+    width: 100%;
 }
 .titleBox h3 {
     font-size: 1.75rem;
@@ -293,6 +294,7 @@ main {
     text-align: left;
     justify-content: flex-end;
     padding-bottom: 20px;
+    width: 100%;
 }
 .titleBox h3 {
     font-size: 1.75rem;
