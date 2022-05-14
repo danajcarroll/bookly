@@ -39,6 +39,20 @@ gsap.from('.logo', {
 });
 
 
+let subpageTitle = gsap.timeline();
+
+subpageTitle.from('.titleHeader', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 0.5)
+.from('.titleSub', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 0.75);
+
+
 window.addEventListener('DOMContentLoaded', () => {
     // setTimeout(() => {
     //     mobileNav.classList.remove('activeMobileNav');
