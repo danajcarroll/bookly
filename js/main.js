@@ -38,7 +38,6 @@ gsap.from('.logo', {
     duration: 0.5
 });
 
-
 let subpageTitle = gsap.timeline();
 
 subpageTitle.from('.titleHeader', {
@@ -51,12 +50,3 @@ subpageTitle.from('.titleHeader', {
     opacity: 0,
     duration: 0.5
 }, 0.75);
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    // setTimeout(() => {
-    //     mobileNav.classList.remove('activeMobileNav');
-    // }, 500);
-
-
-})
