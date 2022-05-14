@@ -5,8 +5,25 @@ const moodInputBox = document.getElementById('moodInput');
 const submitButton = document.getElementById('submitButton');
 const feelingList = document.getElementById('feelingList');
 const clearListButton = document.getElementById('clearList');
-let taskArray = []
+let taskArray = [];
 
+let homeAnimation = gsap.timeline();
+
+homeAnimation.from('.instructions', {
+    y: -50,
+    opacity: 0,
+    duration: 0.5
+}, 0.25)
+.from('.moodInput', {
+    y: -50,
+    opacity: 0,
+    duration: 0.5
+}, 0.5)
+.from('.submitButton', {
+    y: -50,
+    opacity: 0,
+    duration: 0.5
+}, 0.5)
 
 function getTaskHTML(element) {
     return `

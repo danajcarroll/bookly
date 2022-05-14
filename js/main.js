@@ -33,28 +33,11 @@ navButtons.forEach(button => {
 main.style.height = `${bodyHeight - headerHeight}px`;
 
 
-
-let homeAnimation = gsap.timeline();
-
-homeAnimation.from('.logo', {
+gsap.from('.logo', {
     y: -100,
     duration: 0.5
-}, 0)
-.from('.instructions', {
-    y: -50,
-    opacity: 0,
-    duration: 0.5
-}, 0.25)
-.from('.moodInput', {
-    y: -50,
-    opacity: 0,
-    duration: 0.5
-}, 0.5)
-.from('.submitButton', {
-    y: -50,
-    opacity: 0,
-    duration: 0.5
-}, 0.5)
+});
+
 
 window.addEventListener('DOMContentLoaded', () => {
     // setTimeout(() => {
