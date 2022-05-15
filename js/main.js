@@ -22,12 +22,7 @@ exitMobileMenu.addEventListener('click', () => {
 })
 navButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault();
         mobileNav.classList.remove('activeMobileNav');
-
-        setTimeout(function () {
-            window.location.href = button.href;
-        }, 1000)
     })
 });
 main.style.height = `${bodyHeight - headerHeight}px`;

@@ -9,21 +9,64 @@ let taskArray = [];
 
 let homeAnimation = gsap.timeline();
 
-homeAnimation.from('.instructions', {
+homeAnimation.to('.instructions', {
     y: -50,
-    opacity: 0,
+    // autoAlpha: 1,
+    opacity: 1,
     duration: 0.5
 }, 0.25)
-.from('.moodInput', {
+.to('.moodInput', {
     y: -50,
-    opacity: 0,
+    // autoAlpha: 1,
+    opacity: 1,
     duration: 0.5
 }, 0.5)
-.from('.submitButton', {
+.to('.submitButton', {
     y: -50,
-    opacity: 0,
+    // autoAlpha: 1,
+    opacity: 1,
     duration: 0.5
 }, 0.5)
+
+
+let breatheAnimation = gsap.timeline();
+
+breatheAnimation.from('.breatheButtonBox', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 1.25)
+.from('.animationContainer', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 1.5)
+
+let numbersAnimation = gsap.timeline();
+
+numbersAnimation.from('.numberItem', {
+    x: -100,
+    opacity: 0,
+    stagger: 0.25
+}, 1.25)
+
+let ventAnimation = gsap.timeline();
+
+ventAnimation.from('.ventInputBox', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 1.25)
+.from('.trashButton', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 1.5)
+.from('.inputText', {
+    x: -100,
+    opacity: 0,
+    duration: 0.5
+}, 1.75)
 
 function getTaskHTML(element) {
     return `
@@ -59,22 +102,28 @@ async function getResponse() {
 
 submitButton.addEventListener('click', () => {
     let moodInput = moodInputBox.value;
-    let moodTask = {
-        mood: '',
-        task: ''
+    if (!moodInput == '') {
+        console.log('oh great, it has a value');
+        let moodTask = {
+            mood: '',
+            task: ''
+        }
+        data.prompt =  `Suggest one short positive activity I can do based on my mood.\n Mood:${moodInput}\n`;
+        getResponse().then(text => {
+            let newText = text.slice(1);
+            moodTask.task = newText;
+            moodTask.mood = moodInput;
+            // console.log(moodTask);
+            taskArray.unshift(moodTask);
+        }).then(() => {
+            let taskHTML = taskArray.map((element) => getTaskHTML(element));
+            taskHTML = taskHTML.join('');
+            feelingList.innerHTML = taskHTML;
+            moodInputBox.value = '';
+        });
     }
-    data.prompt =  `Suggest one short positive activity I can do based on my mood.\n Mood:${moodInput}\n`;
-    getResponse().then(text => {
-        let newText = text.slice(1);
-        moodTask.task = newText;
-        moodTask.mood = moodInput;
-        console.log(moodTask);
-        taskArray.unshift(moodTask);
-    }).then(() => {
-        let taskHTML = taskArray.map((element) => getTaskHTML(element));
-        taskHTML = taskHTML.join('');
-        feelingList.innerHTML = taskHTML;
-        moodInputBox.value = '';
-    });
+    else {
+        console.log('oh darn, no value');
+    }
 })
 
