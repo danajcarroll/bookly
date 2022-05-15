@@ -16,20 +16,10 @@
 }
 .transition-fade {
     opacity: 1;
-    /* transform: translateX(-100px); */
     transition: 500ms;
-    /* visibility: hidden; */
 }
 html.is-animating .transition-fade {
     opacity: 0;
-}
-@keyframes dropDown {
-    0% {
-        transform: translateY(-100px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
 }
 body {
     background-color: var(--lightBeige);
@@ -48,7 +38,6 @@ header, .mobileNavHeader {
 }
 .logo {
     color: var(--palePurple);
-    animation: dropDown 3s linear 1s;
 }
 .logo, .navLogo {
     font-size: 2.5rem;
@@ -57,9 +46,6 @@ header, .mobileNavHeader {
 .activePage {
     color: var(--orange);
 }
-/* main {
-    height: 100%;
-} */
 #menuButton {
     padding-left: 15px;
     cursor: pointer;
