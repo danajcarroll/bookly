@@ -27,3 +27,12 @@ mobNavButtons.forEach(button => {
 });
 main.style.height = `${bodyHeight - headerHeight}px`;
 
+
+const trashButton = document.getElementById('trashButton');
+const ventInput = document.getElementById('ventInputBox');
+
+trashButton.addEventListener('click', () => {
+    // Animate the ventInput.value off screen somehow
+    ventInput.value = '';
+})
+
