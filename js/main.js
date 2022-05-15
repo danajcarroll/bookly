@@ -27,21 +27,3 @@ navButtons.forEach(button => {
 });
 main.style.height = `${bodyHeight - headerHeight}px`;
 
-
-gsap.from('.logo', {
-    y: -100,
-    duration: 0.5
-});
-
-let subpageTitle = gsap.timeline();
-
-subpageTitle.from('.titleHeader', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 0.5)
-.from('.titleSub', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 0.75);

@@ -7,66 +7,28 @@ const feelingList = document.getElementById('feelingList');
 const clearListButton = document.getElementById('clearList');
 let taskArray = [];
 
+gsap.from('.logo', {
+    y: -100,
+    duration: 0.5
+});
+
 let homeAnimation = gsap.timeline();
 
-homeAnimation.to('.instructions', {
+homeAnimation.from('.instructions', {
     y: -50,
-    // autoAlpha: 1,
-    opacity: 1,
+    opacity: 0,
     duration: 0.5
 }, 0.25)
-.to('.moodInput', {
+.from('.moodInput', {
     y: -50,
-    // autoAlpha: 1,
-    opacity: 1,
+    opacity: 0,
     duration: 0.5
 }, 0.5)
-.to('.submitButton', {
+.from('.submitButton', {
     y: -50,
-    // autoAlpha: 1,
-    opacity: 1,
+    opacity: 0,
     duration: 0.5
 }, 0.5)
-
-
-let breatheAnimation = gsap.timeline();
-
-breatheAnimation.from('.breatheButtonBox', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 1.25)
-.from('.animationContainer', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 1.5)
-
-let numbersAnimation = gsap.timeline();
-
-numbersAnimation.from('.numberItem', {
-    x: -100,
-    opacity: 0,
-    stagger: 0.25
-}, 1.25)
-
-let ventAnimation = gsap.timeline();
-
-ventAnimation.from('.ventInputBox', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 1.25)
-.from('.trashButton', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 1.5)
-.from('.inputText', {
-    x: -100,
-    opacity: 0,
-    duration: 0.5
-}, 1.75)
 
 function getTaskHTML(element) {
     return `
