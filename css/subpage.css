@@ -67,6 +67,7 @@ main {
     font-size: 1rem;
 }
 .inputSection button {
+    cursor: pointer;
     width: 90%;
     padding: 10px;
     font-size: 1.5rem;
@@ -74,6 +75,12 @@ main {
     color: var(--lightBeige);
     border: none;
     border-radius: 9px;
+    transition: 500ms;
+}
+.inputSection button:active {
+    background-color: var(--palePurple);
+    font-size: 1.25rem;
+
 }
 .inputSection p {
     color: var(--darkPurple);
