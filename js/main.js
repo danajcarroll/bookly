@@ -8,7 +8,7 @@ const body = document.querySelector('body');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const navButtonList = document.getElementsByClassName('mobNavListItem');
-const navButtons = [...navButtonList];
+const mobNavButtons = [...navButtonList];
 const bodyHeight = body.clientHeight;
 const headerHeight = header.clientHeight;
 const windowHeight = window.innerHeight;
@@ -20,7 +20,7 @@ menuButton.addEventListener('click', () => {
 exitMobileMenu.addEventListener('click', () => {
     mobileNav.classList.toggle('activeMobileNav');
 })
-navButtons.forEach(button => {
+mobNavButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         mobileNav.classList.remove('activeMobileNav');
     })
