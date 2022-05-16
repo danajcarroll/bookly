@@ -99,7 +99,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
 }
 .animationSetup h4 {
     color: var(--darkPink);
@@ -121,6 +120,11 @@ main {
     font-size: 1.5rem;
     background-color: var(--palePurple);
     color: var(--lightBeige);
+    transition: 500ms;
+}
+.animationSetup button:active {
+    background-color: var(--darkPurple);
+    font-size: 1rem;
 }
 .startButton {
     width: 50%;
@@ -134,9 +138,11 @@ main {
     color: var(--palePurple);
     font-size: 1.75rem;
 
+    opacity: 0;
     display: none;
 }
 .animation {
+    opacity: 0;
     display: none;
 }
 /* NUMBERS PAGE */
