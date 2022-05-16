@@ -14,6 +14,33 @@
     --mediumPink: #E5989B;
     --darkPink: #A78088;
 }
+
+/* SVG STUFF */
+.cls-1, .cls-2 {
+    fill: none;
+    stroke: #8e8997;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+}
+
+.cls-1 {
+    stroke-dasharray: 70;
+}
+
+.cls-2 {
+    stroke-dasharray: 65.45 65.45;
+}
+
+.cls-3 {
+    fill: #b5838d;
+}
+.miniCircle, .innerCircle {
+    visibility: hidden;
+    transform: scale(0);
+}
+
+
+
 main {
     display: block;
     width: 90%;
@@ -142,6 +169,7 @@ main {
     display: none;
 }
 .animation {
+    width: 80%;
     opacity: 0;
     display: none;
 }
@@ -207,7 +235,16 @@ main {
     color: var(--palePurple);
     font-size: 1.5rem;
 }
-
+/* BREATHE PAGE */
+.animationContainer {
+    height: 80%;
+}
+.buttonBox {
+    width: 80%;
+}
+.animation {
+    width: 60%;
+}
 
 
 }
@@ -259,6 +296,16 @@ main {
 .numberList p {
     color: var(--palePurple);
     font-size: 2.25rem;
+}
+/* BREATHE PAGE */
+.animationContainer {
+    height: 85%;
+}
+.buttonBox {
+    width: 80%;
+}
+.animation {
+    width: 50%;
 }
 
 }
@@ -313,6 +360,16 @@ main {
     color: var(--palePurple);
     font-size: 1.5rem;
 }
+/* BREATHE PAGE */
+.animationContainer {
+    height: 80%;
+}
+.buttonBox {
+    width: 50%;
+}
+.animation {
+    width: 50%;
+}
 
 }
 
@@ -364,6 +421,16 @@ main {
 .numberList p {
     color: var(--palePurple);
     font-size: 1.5rem;
+}
+/* BREATHE PAGE */
+.animationContainer {
+    height: 80%;
+}
+.buttonBox {
+    width: 40%;
+}
+.animation {
+    width: 35%;
 }
 
 }
