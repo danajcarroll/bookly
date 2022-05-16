@@ -12,7 +12,7 @@
   <g id="innerFill">
     <circle class="cls-3 innerCircle" cx="562.13" cy="562.13" r="250"/>
   </g>
-  <g id="circ1">
+  <g id="circ1" class="miniCircle">
     <circle class="cls-3 miniCircle" cx="562.13" cy="62.13" r="62.13"/>
   </g>
   <g id="circ2">

@@ -4,61 +4,85 @@
 const breatheButtonList = document.querySelectorAll('.buttonBox button');
 const breatheButtons = [...breatheButtonList];
 
-let myObj = document.getElementById('obj');
+let miniCircles = document.getElementsByClassName('miniCircle');
+let breathSelect = 0;
 
 // CREATING BREATHE ANIMATION
+/* 
+button determines how many repeat
+yoyo makes animation go back and fourth
 
-let miniCircles = myObj.getElementsByClassName('miniCircle');
+*/
 
-    let breatheAnimation = gsap.timeline({duration: 2});
-    breatheAnimation.to(miniCircles, {
+gsap.set('.innerCircle', {
+    scale: 0
+})
+gsap.set(miniCircles, {
+    scale: 0
+})
+    let breatheAnimation = gsap.timeline({
+        paused: true,
+        // repeat: 1,
+        delay: 4,
+        ease: 'power1.out'
+    });
+    breatheAnimation.to('.innerCircle', {
         autoAlpha: 1,
+        scale: 1,
+        duration: 5
+    }, 0)
+    .to(miniCircles, {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 5,
         stagger: {
-            from: 0,
+            each: 0.1,
+            from: 'start'
         }
-    })
+    }, 0)
+    .to('.innerCircle', {
+        scale: 0,
+        duration: 5
+    }, 5)
+    .to(miniCircles, {
+        scale: 0,
+        duration: 5,
+        stagger: {
+            each: 0.1,
+            from: 'end'
+        }
+    }, 5);
+    // .to('.innerCircle', {
+    //     scale: 1,
+    //     duration: 3
+    // }, 3)
+    // .fromTo('.innerCircle', {
+    //     scale: 0
+    // }, {
+    //     scale: 1,
+    //     duration: 2,
+    //     yoyo: true,
+    //     repeat: 2
+    // }, 2);
 
-
-        // myObj.addEventListener('load', () => {
-        //     let mainCircle = myObj.getElementById('mainCircle');
-        //     let miniCircles = myObj.getElementsByClassName('miniCircle')
-            
-            
-        //     let breatheAnimation = gsap.timeline({duration: 2});
-        //     breatheAnimation.to(miniCircles, {
-        //         autoAlpha: 1,
-        //         stagger: {
-        //             from: 0,
-        //         }
-        //     })
-        // })
-
-
-breatheButtons.forEach(button => {
     let animationSetup = gsap.timeline({paused: true});
     animationSetup.to('.animationSetup', {
         y: 200,
         duration: 1,
         opacity: 0,
         display: 'none'
-    }, 2)
+    }, 1)
     .to('.animation', {
         opacity: 1,
         display: 'block',
         duration: 1
-    }, 4);
+    }, 2);
 
-    let breathSelect = 0;
+breatheButtons.forEach(button => {
     button.addEventListener('click', () => {
-        breathSelect = button.value;
+        breathSelect = parseInt(button.value);
         animationSetup.play();
-        // breatheAnimation();
-
-
-
-
-
-        
+        breatheAnimation.play().repeat(breathSelect);
     })
 });
 
