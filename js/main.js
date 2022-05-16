@@ -27,11 +27,10 @@ mobNavButtons.forEach(button => {
 });
 main.style.height = `${bodyHeight - headerHeight}px`;
 
-
+// Vent page
 const trashButton = document.getElementById('trashButton');
 const ventInput = document.getElementById('ventInputBox');
 
 trashButton.addEventListener('click', () => {
     ventInput.value = '';
 })
-
