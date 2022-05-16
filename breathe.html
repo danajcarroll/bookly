@@ -69,15 +69,14 @@
                 <p class="titleSub">That's it really. Just breathe.</p>
             </section>
             <section class="animationContainer">
-                <div class="animationSetup">
+                <div class="animationSetup" id="animationSetup">
                     <h4>How many breaths would you like to take?</h4>
                     <div class="buttonBox">
-                        <button id="threeBreaths">3</button>
-                        <button id="fourBreaths">4</button>
-                        <button id="fiveBreaths">5</button>
+                        <button value="3" id="three">3</button>
+                        <button value="4" id="four">4</button>
+                        <button value="5" id="five">5</button>
                     </div>
                 </div>
-                <button class="startButton">Start</button>
                 <object class="animation" data="css/breatheAnimator.svg" type="image/svg+xml" id="obj"></object>
             </section>
 
@@ -89,5 +88,6 @@
     <script src="/node_modules/swup/dist/swup.min.js"></script>
     <script type='text/javascript' src="/js/main.js"></script>
     <script type='text/javascript' src="/js/index.js"></script>
+    <script type='text/javascript' src="/js/breathe.js"></script>
 </body>
 </html>
