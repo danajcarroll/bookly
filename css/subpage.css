@@ -153,21 +153,6 @@ main {
     background-color: var(--darkPurple);
     font-size: 1rem;
 }
-.startButton {
-    width: 50%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px dashed var(--palePurple);
-    background-color: var(--lightBeige);
-    color: var(--palePurple);
-    font-size: 1.75rem;
-
-    opacity: 0;
-    display: none;
-}
 .animation {
     width: 80%;
     opacity: 0;
