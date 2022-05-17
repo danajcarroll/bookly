@@ -74,7 +74,6 @@ submitButton.addEventListener('click', () => {
             let newText = text.slice(1);
             moodTask.task = newText;
             moodTask.mood = moodInput;
-            // console.log(moodTask);
             taskArray.unshift(moodTask);
         }).then(() => {
             let taskHTML = taskArray.map((element) => getTaskHTML(element));

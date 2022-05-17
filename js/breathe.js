@@ -1,6 +1,4 @@
 'use strict';
-console.clear();
-// Breathe Page
 const breatheButtonList = document.querySelectorAll('.buttonBox button');
 const breatheButtons = [...breatheButtonList];
 
@@ -14,8 +12,6 @@ gsap.set(miniCircles, {
     scale: 0
 })
 
-// First animation that will play
-// Hiding the "how many breaths" box and making div with animation inside appear
 let animationSetup = gsap.timeline({ paused: true });
 animationSetup
 .to(".animationSetup",
@@ -32,8 +28,6 @@ animationSetup
     duration: 1
     }, 2);
 
-// Second animation to play
-// The actual breathing animation that will repeat depending on user input
 let breatheAnimation = gsap.timeline({
 paused: true,
 delay: 4,
@@ -74,8 +68,6 @@ breatheAnimation
     }
     }, 4);
 
-// Third animation to play
-// Restarting the page, hiding the animation svg and making question appear again
 let animationRestart = gsap.timeline({
 paused: true,
 delay: 5
@@ -95,7 +87,6 @@ animationRestart
     duration: 1
     }, 2);
 
-// Triggered by the button press
 breatheButtons.forEach((button) => {
     button.addEventListener("click", () => {
         breathSelect = parseInt(button.value);

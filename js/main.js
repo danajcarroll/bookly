@@ -1,5 +1,5 @@
 'use strict';
-
+console.clear();
 
 const menuButton = document.getElementById('menuButton');
 const exitMobileMenu = document.getElementById('exitMobileMenu');
@@ -12,7 +12,6 @@ const mobNavButtons = [...navButtonList];
 const bodyHeight = body.clientHeight;
 const headerHeight = header.clientHeight;
 const windowHeight = window.innerHeight;
-
 
 menuButton.addEventListener('click', () => {
     mobileNav.classList.toggle('activeMobileNav');
@@ -27,7 +26,6 @@ mobNavButtons.forEach(button => {
 });
 main.style.height = `${bodyHeight - headerHeight}px`;
 
-// Vent page
 const trashButton = document.getElementById('trashButton');
 const ventInput = document.getElementById('ventInputBox');
 
