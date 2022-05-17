@@ -65,7 +65,6 @@ async function getResponse() {
 submitButton.addEventListener('click', () => {
     let moodInput = moodInputBox.value;
     if (!moodInput == '') {
-        console.log('oh great, it has a value');
         let moodTask = {
             mood: '',
             task: ''
@@ -82,10 +81,11 @@ submitButton.addEventListener('click', () => {
             taskHTML = taskHTML.join('');
             feelingList.innerHTML = taskHTML;
             moodInputBox.value = '';
+            moodInput;
         });
     }
     else {
-        console.log('oh darn, no value');
+        alert('Input your current mood in one word please!');
     }
 })
 
