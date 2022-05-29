@@ -160,6 +160,7 @@ a [href^="tel"] {
     font-size: 1.1rem;
 }
 .submitButton {
+    cursor: pointer;
     border: none;
     background-color: var(--palePurple);
     border-radius: 5px;
