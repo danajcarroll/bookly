@@ -84,7 +84,7 @@ function homeInit() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${config.SECRET_KEY}`,
             },
             body: JSON.stringify(data),
             })
